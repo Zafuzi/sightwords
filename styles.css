@@ -1,0 +1,72 @@
+:root{
+    --main: #333;
+    --bg: #fafafa;
+    --accent: rgb(221, 98, 67);
+    --accent-secondary: rgb(55, 211, 115);
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+
+    width: 100vw;
+    height: 100vh;
+}
+
+#button-grid {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    max-width: 500px;
+    padding: 1em 0;
+    justify-content: center;
+}
+
+button {
+    padding: 16px 25px;
+    font-size: 2rem;
+    margin: 10px;
+    color: var(--main);
+    background: var(--accent);
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+}
+#start {
+    z-index: 99;
+}
+#start { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+#button-grid {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+#king {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+#play {
+    width: 100%;
+    background: var(--accent-secondary);
+    border: 2px solid var(--accent-secondary);
+    padding: 25px;
+}
+
+.opaque { 
+    opacity: 1;
+}
+
+.transparent {
+    opacity: 0;
+    z-index: -1;
+}
+
+.fade { 
+    transition: all .3s;
+}
